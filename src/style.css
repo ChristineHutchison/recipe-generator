@@ -24,10 +24,15 @@ header {
 }
 h1 {
 	font-weight: 800;
-	font-size: 36px;
+	font-size: 60px;
 	line-height: 1.5;
 	color: teal;
 	text-align: center;
+	font-family: "Dancing Script", cursive;
+}
+h2 {
+	font-family: "Dancing Script", cursive;
+	line-height: 1.5;
 }
 
 form {
@@ -35,8 +40,9 @@ form {
 	background-color: rgba(255, 255, 255, 0.523);
 	border-radius: 50px;
 	display: flex;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	border-left: 3px solid teal;
+	margin-top: 50px;
 }
 .input {
 	padding: 10px;
@@ -67,6 +73,7 @@ form {
 	box-shadow: 0px 20px 60px rgba(65 50 100, 0.08);
 	margin-bottom: 20px;
 	border-radius: 50px;
+	text-align: left;
 }
 a {
 	color: teal;
