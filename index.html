@@ -13,42 +13,47 @@
 		<title>AI Recipe Generator</title>
 	</head>
 	<body>
-		<header>
-			<h1>Welcome to the AI recipe generator</h1>
-		</header>
-		<main>
-			<form action="">
-				<input
-					type="text"
-					placeholder="Enter your available ingredients..."
-					autofocus
-					required
-					autocomplete="off"
-				/>
-				<input type="submit" />
-			</form>
-			<div>The recipe will go here</div>
-		</main>
-		<footer>
-			This AI project was coded by
-			<a
-				href="https://github.com/ChristineHutchison"
-				target="_blank"
-				>Christine Hutchison</a
-			>
-			and is
-			<a
-				href="https://github.com/ChristineHutchison/recipe-generator"
-				target="_blank"
-				>open-sourced on GitHub</a
-			>
-			and
-			<a
-				href="https://recipes-for-fern.netlify.app/"
-				target="_blank"
-				>hosted on Netlify</a
-			>.
-		</footer>
+		<div class="container">
+			<header>
+				<h1>🌿 Fern's recipe generator 🍝</h1>
+			</header>
+			<main>
+				<form action="">
+					<input
+						type="text"
+						placeholder="Enter your ingredients..."
+						autofocus
+						required
+						autocomplete="off"
+						class="input"
+					/>
+					<input
+						type="submit"
+						class="button"
+					/>
+				</form>
+				<div class="recipe">The recipe will go here</div>
+			</main>
+			<footer>
+				AI project coded with ❤️ by
+				<a
+					href="https://github.com/ChristineHutchison"
+					target="_blank"
+					>Christine Hutchison</a
+				>.<br />
+				<a
+					href="https://github.com/ChristineHutchison/recipe-generator"
+					target="_blank"
+					>Open-sourced on GitHub</a
+				>
+				and
+				<a
+					href="https://recipes-for-fern.netlify.app/"
+					target="_blank"
+					>hosted on Netlify</a
+				>.
+			</footer>
+		</div>
 		<script src="src/index.js"></script>
 	</body>
 </html>

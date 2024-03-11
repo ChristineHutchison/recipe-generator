@@ -1,0 +1,79 @@
+body {
+	background: linear-gradient(
+		90.9deg,
+		rgb(255, 187, 187) -8.8%,
+		rgb(255, 220, 177) 12.4%,
+		rgb(255, 249, 177) 35.6%,
+		rgb(220, 255, 177) 59.6%,
+		rgb(177, 218, 255) 84%,
+		rgb(222, 177, 255) 107.9%
+	);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
+
+.container {
+	margin: 120px auto;
+	max-width: 600px;
+
+	padding: 20px;
+}
+header {
+	margin-bottom: 30px;
+}
+h1 {
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 1.5;
+	color: teal;
+	text-align: center;
+}
+
+form {
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.523);
+	border-radius: 50px;
+	display: flex;
+	margin-bottom: 20px;
+	border-left: 3px solid teal;
+}
+.input {
+	padding: 10px;
+	border: 1px solid rgba(251, 248, 248, 0.459);
+	width: 80%;
+	font-size: 18px;
+	border-radius: 30px;
+	line-height: 20px;
+	color: teal;
+}
+.button {
+	margin-left: 10px;
+	border: 1px solid rgba(251, 248, 248, 0.459);
+	width: 150px;
+	font-size: 18px;
+	border-radius: 50px;
+	background-color: white;
+	color: teal;
+}
+
+.recipe {
+	font-size: 18px;
+	color: teal;
+	background-color: rgba(255, 255, 255, 0.523);
+	padding: 20px;
+	line-height: 24px;
+	border-left: 3px solid teal;
+	box-shadow: 0px 20px 60px rgba(65 50 100, 0.08);
+	margin-bottom: 20px;
+	border-radius: 50px;
+}
+a {
+	color: teal;
+	text-decoration: none;
+}
+
+footer {
+	font-size: 13px;
+	margin-top: 50px;
+}
