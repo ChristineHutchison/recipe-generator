@@ -17,6 +17,10 @@ function generateRecipe(event) {
 	let prompt = `User instructions: Generate a recipe suitable for a toddler. The recipe must include the ingredients ${recipeIngredients.value}. It should not contain any soy, soya, dairy, milk or butter. `;
 	let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`
 
+	let recipeElement = document.querySelector("#recipe");
+	recipeElement.classList.remove("hidden");
+	recipeElement.innerHTML = `<span class="blink">🌽Generating your soy and dairy-free recipe with ${recipeIngredients.value}...🍉</span>`;
+
 	console.log("Generating Poem");
 	console.log(`Prompt: ${prompt}`);
 	console.log(`Context: ${context}`);

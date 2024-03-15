@@ -36,14 +36,27 @@ h2 {
 }
 
 form {
+	
+	display: flex;
+	
+}
+
+.form-container{
 	padding: 30px;
 	background-color: rgba(255, 255, 255, 0.523);
-	border-radius: 50px;
-	display: flex;
-	margin-bottom: 50px;
+	border-radius: 50px;margin-bottom: 50px;
 	border-left: 3px solid teal;
 	margin-top: 50px;
+	text-align: left;
 }
+
+.hint{
+	line-height: 1.5;
+	margin-top: 5px;
+	font-size: 12px;
+	opacity: 0.6
+}
+
 .input {
 	padding: 10px;
 	border: 1px solid rgba(251, 248, 248, 0.459);
@@ -75,6 +88,11 @@ form {
 	border-radius: 50px;
 	text-align: left;
 }
+
+.hidden{
+	display: none;
+}
+
 a {
 	color: teal;
 	text-decoration: none;
@@ -83,4 +101,20 @@ a {
 footer {
 	font-size: 13px;
 	margin-top: 50px;
+}
+
+.blink{
+	animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes blink-animation{
+	to{
+		visibility:hidden;
+	}
 }
