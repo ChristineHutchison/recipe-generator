@@ -1,56 +1,27 @@
+function displayRecipe (response){
+	new Typewriter("#recipe", {
+		strings: response.data.answer,
+		autoStart: true,
+		cursor: null,
+		delay: 1,
+	});
+}
+
 function generateRecipe(event) {
 	event.preventDefault();
 
-	let recipeElement = document.querySelector("#recipe");
+	let recipeIngredients = document.querySelector("#recipe-ingredients");
 
-	new Typewriter("#recipe", {
-		strings: `<h2><strong>Pumpkin Pie</strong></h2>
-					<h2>Ingredients:</h2>
-					<ul>
-						<li>1/2 Cup Brown Sugar, firmly packed</li>
-						<li>1/4 Cup White Sugar</li>
-						<li>1 Teaspoon Ground Cinnamon</li>
-						<li>1/2 Teaspoon Ground Ginger</li>
-						<li>1/4 Teaspoon Ground Nutmeg or Allspice</li>
-						<li>1/4 Teaspoon Ground Cloves</li>
-						<li>1/2 Teaspoon Salt</li>
-						<li>2 Large Eggs</li>
-						<li>
-							15 oz. of pumpkin puree (a little shy of 2 cups) — I like to use
-							Happy Belly Organic Pumpkin Puree
-						</li>
-						<li>1 Teaspoon Vanilla Extract</li>
-						<li>
-							1 Cup Regular Coconut Milk (I like So Delicious Coconut Milk)
-						</li>
-						<li>1 Wholly Wholesome Organic Traditional 9″ frozen pie shell</li>
-					</ul>
-					<h2>Directions:</h2>
-					<ul>
-						<li>Preheat your oven to 425ºF.</li>
-						<li>
-							Combine the sugars, cinnamon, ginger, nutmeg or allspice, cloves
-							and salt in a small bowl.
-						</li>
-						<li>
-							In a large bowl, beat the eggs. Beat in the sugar mixture,
-							pumpkin, and vanilla until smooth. Fold in the coconut milk.
-						</li>
-						<li>
-							Pour the filling into the unbaked pie crust and bake for 15
-							minutes. Reduce the temperature to 350ºF and continue to bake for
-							50 to 60 minutes, or until a knife inserted comes out clean. It
-							may be a bit wobbly still, but it will firm-up as it cools.
-						</li>
-						<li>
-							Allow the pie to cool on a wire rack for 2 hours (Be patient! This
-							is important). Serve or refrigerate until ready to serve.
-						</li>
-					</ul>`,
-		autoStart: true,
-		cursor: null,
-		delay: 20,
-	});
+	let apiKey = "bc4649524ebb028af8032a47bt4c53o0";
+	let context = "You are a talented recipe writer. You love to create simple recipes for toddlers. Your mission is to write recipes with a clear list of ingredients and the quantities of the ingredients should be in gram and millilitres. The method of the recipes should be written simply with clear steps to follow. All recipes should avoid soy and dairy and be suitable for toddlers. Please write the recipe in basic HTML and be sure to follow the user instructions.";
+	let prompt = `User instructions: Generate a recipe suitable for a toddler. The recipe must include the ingredients ${recipeIngredients.value}. It should not contain any soy, soya, dairy, milk or butter. `;
+	let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`
+
+	console.log("Generating Poem");
+	console.log(`Prompt: ${prompt}`);
+	console.log(`Context: ${context}`);
+
+	axios.get(apiUrl).then(displayRecipe);
 }
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
